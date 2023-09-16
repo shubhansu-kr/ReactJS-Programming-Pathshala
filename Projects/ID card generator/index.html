@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ID Card Generator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>ID Card Generator</h1>
+        </div>
+        <div class="content">
+            <div class="formContent">
+                <form id="idForm" method="POST" onsubmit="return false">
+                    <h3>Enter student details</h3>
+                    <h5>Enter name:</h5>
+                    <input required type="text" name="name" id="name">
+                    <h5>Enter College name:</h5>
+                    <input required type="text" name="College" id="college">
+                    <h5>Enter Location:</h5>
+                    <input required type="tel" name="address" id="address">
+                    <h5>Enter Student picture:</h5>
+                    <input id="photo" required type="file" accept="image/*" />
+                    <br>
+                    <button class="submitBtn" id="generatebtn" onclick="generateCard()">Generate</button>
+                </form>
+            </div>
+            <div class="cardContent">
+                <div class="picture">
+                    <img id="image" src="images/avatar-1577909_1280.webp" alt="">
+                </div>
+                <div class="data">
+                    <h4 id="cardName">Name: </h4>
+                    <h5 id="cardCollege">College name: </h5>
+                    <h5 id="cardLocation">Location: </h5>
+                </div>      
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
